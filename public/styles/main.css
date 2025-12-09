@@ -1,0 +1,260 @@
+/* ================================
+   Variables Globales
+================================ */
+:root {
+  --primary: #1e88e5;
+  --text: #333;
+  --light: #f5f7fa;
+  --border: #e1e5eb;
+  --radius: 10px;
+  --transition: 0.25s ease;
+}
+
+/* ================================
+   Reset + Base
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  color: var(--text);
+  background: white;
+  line-height: 1.6;
+}
+
+/* ================================
+   Header
+================================ */
+header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Navigation */
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* ================================
+   Hero Section
+================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 100px;
+  background: var(--light);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  max-width: 700px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 14px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Features Section
+================================ */
+.features {
+  padding: 80px 40px;
+}
+
+.features h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* ================================
+   Testimonials
+================================ */
+.testimonials {
+  background: var(--light);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.testimonials h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-box {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.15rem;
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  line-height: 1.7;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.client-name {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ================================
+   Contact Section
+================================ */
+.contact {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.contact h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+}
+
+button {
+  background: var(--primary);
+  border: none;
+  padding: 14px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ================================
+   Footer
+================================ */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--light);
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   Form Errors & Status
+================================ */
+.field-error {
+  color: #c62828;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  min-height: 18px;
+}
+
+.form-status {
+  margin-top: 12px;
+  font-weight: 600;
+}
